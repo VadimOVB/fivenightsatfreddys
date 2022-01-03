@@ -100,6 +100,8 @@ let mySprite2: Sprite = null
 let mySprite: Sprite = null
 let mySpritePic: Image[] = []
 let light2 = false
+scene.setBackgroundColor(11)
+tiles.setTilemap(tilemap`level1`)
 lantern.setBreathingEnabled(true)
 light2 = true
 mySpritePic = [
@@ -252,8 +254,6 @@ for (let value of sprites.allOfKind(SpriteKind.StopEnemy)) {
 }
 mySprite = sprites.create(mySpritePic[2], SpriteKind.Player)
 controller.moveSprite(mySprite)
-scene.setBackgroundColor(11)
-tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, assets.tile`myTile1`)
 scene.cameraFollowSprite(mySprite)
 let item = sprites.create(img`
